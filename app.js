@@ -6,10 +6,10 @@ const { render } = require('express/lib/response');
 
 const app = express();
 
-const dbURI = 'mongodb+srv://abs1289:abs%401289@cluster0.fhm2u.mongodb.net/node-tuts?retryWrites=true&w=majority';
+// const dbURI = "mongoDB cluster string needed";
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology : true})
 .then((result)=>{app.listen(3000); console.log('connected to db')})
-.catch((err)=>console.log(err));//establishing database connection
+.catch((err)=>console.log(err + "\n mongoDB cluster string needed"));//establishing database connection
 
 app.set('view engine','ejs');
 
